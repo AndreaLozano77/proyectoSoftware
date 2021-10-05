@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/consultar.js"></script>
+    <script type="text/javascript" src="js/guardar.js"></script>
+    <script type="text/javascript" src="js/editar.js"></script>
+    <script type="text/javascript" src="js/eliminar.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Proyecto Software Ciclo3</title>
+</head>
+<body>
+    <h2>Proyecto ciclo 3</h2>
+    <h3>Mis Gatos</h3>
+    <p>Registra un gato</p>
+    <br>
+    <label>ID</label>
+    <input id="id" type="text"/> 
+    <br/>
+
+    <label>Nombre</label> 
+    <input id="nombre" type="text"/>
+    <br/>
+
+    <label>Edad</label>
+    <input id="edad" type="text"/>
+    <br/>
+
+    <label>Color</label>
+    <input id="color" type="text"/>
+    <br/>
+
+    <button onclick="guardar()">Guardar</button>
+
+
+    <p>Gatos Registrados</p>
+    <button onclick="consultar()">Consultar Datos</button>
+
+    <div id="tabla">
+
+    </div>
+</body>
+</html>
