@@ -3,26 +3,27 @@
 console.log("guardar: esta página funciona!");
 
 function guardar(){
-    let gato = {
+    let computador = {
         id: +$("#id").val(),
-        nombre:  $("#nombre").val(),
-        edad: +$("#edad").val(),
-        color: $("#color").val()
+        brand:  $("#brand").val(),
+        model: +$("#model").val(),
+        category_id: $("#category_id").val(),
+        name: $("#name").val()
     };
 
-    console.log("voy a guardar", gato);
+    console.log("voy a guardar", computador);
 
     $.ajax({
-        url: "https://g142e26c7fbb1b8-animalitos.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/animales/gatos",
+        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/computer/computer",
         type: 'POST',
         dataType: 'json',
         headers: {
             "Content-Type": "application/json"
         },
-        data: JSON.stringify(gato),
+        data: JSON.stringify(computador),
         statusCode:{
             201:function(){
-                alert('Se ha registrado el gato');
+                alert('Se ha registrado el computador');
             }
         },
     });
