@@ -13,36 +13,45 @@
     <title>Proyecto Software Ciclo3</title>
 </head>
 <body>
-    <h2>Proyecto ciclo 3</h2>
-    <h3>TIENDA DE COMPUTADORES</h3>
-    <p>REGISTRAR UN COMPUTADOR:</p>
-    <br>
-    <label>ID</label>
-    <input id="id" type="text"/> 
-    <br/>
+    <h3 class="project-titulo">Proyecto ciclo 3</h3>
+    <header>
+        <h1>TIENDA DE COMPUTADORES</h1>
+    </header>
 
-    <label>Brand</label> 
-    <input id="brand" type="text"/>
-    <br/>
+    <div class="container">
+        <section class="registrar">
+            <h2 class="registrar-titulo">REGISTRAR UN COMPUTADOR:</h2>
+            <label>ID</label>
+            <input id="id" type="text"/> 
+            <br/>
+        
+            <label>Brand</label> 
+            <input id="brand" type="text"/>
+            <br/>
+        
+            <label>Model</label>
+            <input id="model" type="text"/>
+            <br/>
+        
+            <label>Category_id</label>
+            <input id="category_id" type="text"/>
+            <br/>
+        
+            <label>Name</label>
+            <input id="name" type="text"/>
+            <br/>
+        
+            <button class="btn-guardar" onclick="guardar()">Guardar</button>
+        </section>
 
-    <label>Model</label>
-    <input id="model" type="text"/>
-    <br/>
-
-    <label>Category_id</label>
-    <input id="category_id" type="text"/>
-    <br/>
-
-    <label>Name</label>
-    <input id="name" type="text"/>
-    <br/>
-
-    <button onclick="guardar()">Guardar</button>
+        <section class="lista">
+            <h2 class="lista-titulo">LISTA DE COMPUTADORES:</h2>
+            <div id="tabla"></div>
+            <button class="btn-consultar" onclick="consultar()">Consultar Datos</button>
+        
+        </section>
+    </div>
 
 
-    <p>LISTA DE COMPUTADORES:</p>
-    <button onclick="consultar()">Consultar Datos</button>
-
-    <div id="tabla"></div>
 </body>
 </html>

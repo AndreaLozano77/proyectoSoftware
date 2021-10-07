@@ -1,4 +1,87 @@
 /* El siguiente es un ejemplo para probar el css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color:lightblue;
 }
+
+.project-titulo{
+    margin: 40px 0 0 40px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+h1{
+    text-align: center;
+    padding: 40px 0 80px;
+    color: #555;
+}
+
+h2{
+    color: #555;
+}
+
+.registrar{
+    border: 3px solid red;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+}
+
+.registrar-titulo{
+    margin-bottom: 40px;
+}
+
+.lista{
+    border: 3px solid blue;
+    display: flex;
+    width: auto;
+    flex-direction: column;
+}
+.lista-titulo{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.btn-guardar{
+    width: 200px;
+    background-color: #27e027;
+    color: #fff;
+    text-transform:uppercase;
+    padding: 10px;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.btn-consultar{
+    width: 200px;
+    background-color: #27e027;
+    color: #fff;
+    text-transform:uppercase;
+    padding: 10px;
+    margin: 100px auto 0;
+    border: none;
+    border-radius: 10px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input{
+    width: auto;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+}
+
+
