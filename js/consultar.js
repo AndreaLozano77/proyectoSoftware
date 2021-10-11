@@ -1,7 +1,3 @@
-//Este archivo es en donde haremos GET
-
-console.log("consultar: está funcionando");
-
 function consultar() {
 
     $.ajax({
@@ -43,9 +39,8 @@ function mostrarRespuesta(items) {
                    <td>${items[i].category_id}</td>
                    <td>${items[i].name}</td>
                    <td>
-                   <button onclick="editar(${items[i].id})">PUT</button>
-                   <button onclick="eliminar(${items[i].id})">DELETE</button>
-                   </td> 
+                   <button class="btn-eliminar" onclick="eliminar(${items[i].id})">Eliminar</button>
+                   <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>                   </td> 
                    </tr>`;
     }
     tabla += `</table>`;

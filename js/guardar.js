@@ -1,7 +1,3 @@
-//este archivo es en donde haremos POST
-
-console.log("guardar: esta página funciona!");
-
 function guardar(){
     let computador = {
         id: +$("#id").val(),
