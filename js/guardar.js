@@ -52,8 +52,8 @@ function guardarClient(){
 
 function guardarMessage(){
     let messages = {
-        idMessage: +$("#idMessage").val(),
-        message:  $("#message").val()
+        id: +$("#idMessage").val(),
+        messagetext:  $("#message").val()
     };
 
     console.log("voy a guardar", messages);

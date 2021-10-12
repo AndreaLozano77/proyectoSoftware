@@ -127,7 +127,7 @@ function mostrarRespuestaMessage(items) {
     for (var i = 0; i < items.length; i++) {
         tabla += `<tr>
                    <td>${items[i].id}</td>
-                   <td>${items[i].message}</td>
+                   <td>${items[i].messagetext}</td>
                    <td>
                    <button class="btn-eliminar" onclick="eliminar(${items[i].id})">Eliminar</button>
                    <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>                   </td> 
