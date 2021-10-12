@@ -20,7 +20,7 @@
 
     <div class="container1">
         <section class="registrar">
-            <h2 class="registrar-titulo">REGISTRAR UN COMPUTADOR DE JOHN LINARES:</h2>
+            <h2 class="registrar-titulo">REGISTRAR UN COMPUTADOR:</h2>
             <label>ID</label>
             <input id="id" type="text"/> 
         
@@ -36,7 +36,7 @@
             <label>NAME</label>
             <input id="name" type="text"/>
         
-            <button class="btn-guardar" onclick="guardar()">Guardar</button>
+            <button class="btn-guardar" onclick="guardarComputer()">Guardar</button>
         </section>
 
         <section class="lista">
@@ -53,10 +53,10 @@
         <section class="registrar">
             <h2 class="registrar-titulo">REGISTRAR UN CLIENTE:</h2>
             <label>ID</label>
-            <input id="id" type="text"/> 
+            <input id="idClient" type="text"/> 
         
             <label>NAME</label> 
-            <input id="name" type="text"/>
+            <input id="nameClient" type="text"/>
         
             <label>EMAIL</label>
             <input id="email" type="text"/>
@@ -64,13 +64,13 @@
             <label>AGE</label>
             <input id="age" type="text"/>
         
-            <button class="btn-guardar" onclick="guardar()">Guardar</button>
+            <button class="btn-guardar" onclick="guardarClient()">guardarClient</button>
         </section>
 
         <section class="lista">
             <h2 class="lista-titulo">LISTA DE CLIENTES:</h2>
-            <div id="tabla"></div>
-            <button class="btn-consultar" onclick="consultar()">Consultar Datos</button>
+            <div id="tablaClient"></div>
+            <button class="btn-consultar" onclick="consultarClient()">Consultar Datos Clientes</button>
         
         </section>
     </div>
@@ -81,18 +81,18 @@
         <section class="registrar">
             <h2 class="registrar-titulo">REGISTRAR MENSAJE:</h2>
             <label>ID</label>
-            <input id="id" type="text"/> 
+            <input id="idMessage" type="text"/> 
         
             <label>MENSAJE</label> 
-            <input id="name" type="text"/>
+            <input id="message" type="text"/>
         
-            <button class="btn-guardar" onclick="guardar()">Guardar</button>
+            <button class="btn-guardar" onclick="guardarMessage()">GuardarM</button>
         </section>
 
         <section class="lista">
             <h2 class="lista-titulo">LISTA DE MENSAJES:</h2>
-            <div id="tabla"></div>
-            <button class="btn-consultar" onclick="consultar()">Consultar Datos</button>
+            <div id="tablaMessage"></div>
+            <button class="btn-consultar" onclick="consultarMessage()">Consultar Datos Mensaje</button>
         
         </section>
     </div>
