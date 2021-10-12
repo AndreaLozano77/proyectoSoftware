@@ -64,9 +64,7 @@ function consultarClient() {
         complete: function (xhr, status) {
             //console.log(status);
         }
-
     });
-
 }
 
 function mostrarRespuestaClient(items) {
@@ -99,7 +97,7 @@ function mostrarRespuestaClient(items) {
 function consultarMessage() {
 
     $.ajax({
-        url: "https://gacf52a546b7955-computer.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/message/message",
+        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {

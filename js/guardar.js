@@ -26,10 +26,10 @@ function guardarComputer(){
 } 
 function guardarClient(){
     let client = {
-        idClient: +$("#idClient").val(),
-        nameClient:  $("#nameClient").val(),
+        id: +$("#idClient").val(),
+        name:  $("#nameClient").val(),
         email: $("#email").val(),
-        age: $("#age").val()
+        age: +$("#age").val()
     };
 
     console.log("voy a guardar", client);
@@ -48,7 +48,7 @@ function guardarClient(){
             }
         },
     });
-} 
+}
 
 function guardarMessage(){
     let messages = {
@@ -59,7 +59,7 @@ function guardarMessage(){
     console.log("voy a guardar", messages);
 
     $.ajax({
-        url: "https://gacf52a546b7955-computer.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/message/message",
+        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message",
         type: 'POST',
         dataType: 'json',
         headers: {
