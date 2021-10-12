@@ -1,7 +1,6 @@
 //Este archivo es donde haremos DELETE
 
-console.log("eliminar: ¡Funciona!");
-
+// ELIMINAR COMPUTADORES
 
 function eliminar(identificador){
     console.log("ejecutando funcion para eliminar");
@@ -26,5 +25,63 @@ function eliminar(identificador){
             }
         },
     });
+}
 
+
+
+// ELIMINAR CLIENTES
+
+
+function eliminar(identificador){
+    console.log("ejecutando funcion para eliminar");
+
+    let client = {
+        id: +identificador
+    };
+
+    console.log(client);
+
+    $.ajax({
+        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client",
+        type: 'DELETE',
+        dataType: 'json',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        data: JSON.stringify(client),
+        statusCode:{
+            204:function(){
+                alert('Se ha eliminado el cliente');
+            }
+        },
+    });
+}
+
+
+// ELIMINAR MENSAJES
+
+
+function eliminar(identificador){
+    console.log("ejecutando funcion para eliminar");
+
+    let message = {
+        id: +identificador
+    };
+
+    console.log(message);
+
+    $.ajax({
+        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message",
+        type: 'DELETE',
+        dataType: 'json',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        data: JSON.stringify(message),
+        statusCode:{
+            204:function(){
+                alert('Se ha eliminado el message');
+            }
+        },
+    });
 }
