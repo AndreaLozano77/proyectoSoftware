@@ -1,3 +1,7 @@
+//===============================================
+// COMPUTER
+//===============================================
+
 function guardarComputer(){
     let computador = {
         id: +$("#id").val(),
@@ -24,6 +28,13 @@ function guardarComputer(){
         },
     });
 } 
+
+
+
+//===============================================
+// CLIENTE
+//===============================================
+
 function guardarClient(){
     let client = {
         id: +$("#idClient").val(),
@@ -49,6 +60,12 @@ function guardarClient(){
         },
     });
 }
+
+
+
+//===============================================
+// MESSAGE
+//===============================================
 
 function guardarMessage(){
     let messages = {

@@ -53,6 +53,8 @@ function mostrarRespuestaComputer(items) {
     $("#tabla").html(tabla);
 }
 
+
+
 //===============================================
 // CLIENTE
 //===============================================
@@ -95,13 +97,21 @@ function mostrarRespuestaClient(items) {
                    <td>${items[i].age}</td>
                    <td>
                    <button class="btn-eliminar" onclick="eliminarClient(${items[i].id})">Eliminar</button>
-                   <a class="edicion" href="detalleCliente.html?id=${items[i].id}">Editar</a>                   </td> 
+                   <a class="edicion" href="detalleCliente.html?id=${items[i].id}">Editar</a>                   
+                   </td> 
                    </tr>`;
     }
     tabla += `</table>`;
 
     $("#tablaClient").html(tabla);
 }
+
+
+
+//===============================================
+// MESSAGE
+//===============================================
+
 
 function consultarMessage() {
 

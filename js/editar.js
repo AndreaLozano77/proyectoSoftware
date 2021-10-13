@@ -1,7 +1,7 @@
 //Este archivo es en donde haremos PUT
 console.log("editar: ¡funciona!");
 //=======================================
-// ACTUALIZAR COMPUTER
+// EDITAR COMPUTER
 //=======================================
 
 
@@ -35,7 +35,7 @@ function editarComputer(){
 }
 
 //=======================================
-// ACTUALIZAR CLIENTE
+// EDITAR CLIENTE
 //=======================================
 
 
@@ -69,7 +69,7 @@ function editarClient(){
 
 
 //=======================================
-// ACTUALIZAR MESSAGE
+// EDITAR MESSAGE
 //=======================================
 
 
