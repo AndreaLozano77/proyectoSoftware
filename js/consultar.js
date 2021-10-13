@@ -1,4 +1,8 @@
-function consultar() {
+//===============================================
+// COMPUTER
+//===============================================
+
+function consultarComputer() {
 
     $.ajax({
         url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/computer/computer",
@@ -6,7 +10,7 @@ function consultar() {
         dataType: 'json',
         success: function (respuesta) {
             console.log(respuesta.items);
-            mostrarRespuesta(respuesta.items);
+            mostrarRespuestaComputer(respuesta.items);
         },
         error: function (xhr, status) {
             alert('ha sucedido un problema');
@@ -19,7 +23,7 @@ function consultar() {
 
 }
 
-function mostrarRespuesta(items) {
+function mostrarRespuestaComputer(items) {
     var tabla = `<table border="1">
                   <tr>
                     <th>ID</th>
@@ -39,14 +43,19 @@ function mostrarRespuesta(items) {
                    <td>${items[i].category_id}</td>
                    <td>${items[i].name}</td>
                    <td>
-                   <button class="btn-eliminar" onclick="eliminar(${items[i].id})">Eliminar</button>
-                   <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>                   </td> 
+                   <button class="btn-eliminar" onclick="eliminarComputer(${items[i].id})">Eliminar</button>
+                   <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>
+                   </td> 
                    </tr>`;
     }
     tabla += `</table>`;
 
     $("#tabla").html(tabla);
 }
+
+//===============================================
+// CLIENTE
+//===============================================
 
 function consultarClient() {
 
@@ -85,8 +94,8 @@ function mostrarRespuestaClient(items) {
                    <td>${items[i].email}</td>
                    <td>${items[i].age}</td>
                    <td>
-                   <button class="btn-eliminar" onclick="eliminar(${items[i].id})">Eliminar</button>
-                   <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>                   </td> 
+                   <button class="btn-eliminar" onclick="eliminarClient(${items[i].id})">Eliminar</button>
+                   <a class="edicion" href="detalleCliente.html?id=${items[i].id}">Editar</a>                   </td> 
                    </tr>`;
     }
     tabla += `</table>`;
@@ -129,8 +138,9 @@ function mostrarRespuestaMessage(items) {
                    <td>${items[i].id}</td>
                    <td>${items[i].messagetext}</td>
                    <td>
-                   <button class="btn-eliminar" onclick="eliminar(${items[i].id})">Eliminar</button>
-                   <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>                   </td> 
+                   <button class="btn-eliminar" onclick="eliminarMessage(${items[i].id})">Eliminar</button>
+                   <a class="edicion" href="detalleMessage.html?id=${items[i].id}">Editar</a>                   
+                   </td> 
                    </tr>`;
     }
     tabla += `</table>`;

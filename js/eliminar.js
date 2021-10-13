@@ -2,7 +2,7 @@
 
 // ELIMINAR COMPUTADORES
 
-function eliminar(identificador){
+function eliminarComputer(identificador){
     console.log("ejecutando funcion para eliminar");
 
     let computer = {
@@ -25,14 +25,14 @@ function eliminar(identificador){
             }
         },
     });
-}
+} 
 
 
 
 // ELIMINAR CLIENTES
 
 
-function eliminar(identificador){
+function eliminarClient(identificador){
     console.log("ejecutando funcion para eliminar");
 
     let client = {
@@ -61,7 +61,7 @@ function eliminar(identificador){
 // ELIMINAR MENSAJES
 
 
-function eliminar(identificador){
+function eliminarMessage(identificador){
     console.log("ejecutando funcion para eliminar");
 
     let message = {
