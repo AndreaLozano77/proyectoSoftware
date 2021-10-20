@@ -10,10 +10,10 @@ function editarComputer(){
 
     let computer = {
         id: +$("#id").val(),
+        name: $("#Cname").val(),
         brand: $("#brand").val(),
-        model: +$("#model").val(),
-        category_id: $("#category_id").val(),
-        name: $("#name").val()
+        year: +$("#year").val(),
+        description: $("#description").val(),
     };
 
     console.log(computer);

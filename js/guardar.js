@@ -1,14 +1,43 @@
 //===============================================
+// CATEGORIA
+//===============================================
+
+function guardarCategoria(){
+    let computador = {
+        name:  $("#Catname").val(),
+        description: $("#Catdescription").val()
+    };
+
+    console.log("voy a guardar", computador);
+
+    $.ajax({
+        url: "http://localhost:8080/api/Category/save",
+        type: 'POST',
+        dataType: 'json',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        data: JSON.stringify(computador),
+        statusCode:{
+            201:function(){
+                alert('Se ha registrado la categoria');
+            }
+        },
+    });
+} 
+
+
+
+//===============================================
 // COMPUTER
 //===============================================
 
 function guardarComputer(){
     let computador = {
-        id: +$("#id").val(),
-        brand:  $("#brand").val(),
-        model: +$("#model").val(),
-        category_id: $("#category_id").val(),
-        name: $("#name").val()
+        name:  $("#Cname").val(),
+        brand: $("#brand").val(),
+        year: +$("#year").val(),
+        description: $("#description").val()
     };
 
     console.log("voy a guardar", computador);
@@ -38,8 +67,9 @@ function guardarComputer(){
 function guardarClient(){
     let client = {
         id: +$("#idClient").val(),
-        name:  $("#nameClient").val(),
-        email: $("#email").val(),
+        email:  $("#email").val(),
+        password: $("#password").val(),
+        name: $("#Clname").val(),
         age: +$("#age").val()
     };
 
@@ -69,8 +99,7 @@ function guardarClient(){
 
 function guardarMessage(){
     let messages = {
-        id: +$("#idMessage").val(),
-        messagetext:  $("#message").val()
+        messageText: $("#message").val()
     };
 
     console.log("voy a guardar", messages);
@@ -86,6 +115,35 @@ function guardarMessage(){
         statusCode:{
             201:function(){
                 alert('Se ha registrado el mensaje');
+            }
+        },
+    });
+} 
+
+
+//===============================================
+// RESERVAS
+//===============================================
+
+function guardarReserva(){
+    let reservas = {
+        startDate: $("#date").val(),
+        devolutionDate: $("#dateDev").val()
+    };
+
+    console.log("voy a guardar", reservas);
+
+    $.ajax({
+        url: "http://localhost:8080/api/Reservation/save",
+        type: 'POST',
+        dataType: 'json',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        data: JSON.stringify(reservas),
+        statusCode:{
+            201:function(){
+                alert('Se ha registrado la reserva');
             }
         },
     });

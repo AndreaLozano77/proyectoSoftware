@@ -1,4 +1,54 @@
 //===============================================
+// CATEGORIA
+//===============================================
+
+function consultarCategoria() {
+
+    $.ajax({
+        url: "http://localhost:8080/api/Category/all",
+        type: 'GET',
+        dataType: 'json',
+        success: function (respuesta) {
+            console.log(respuesta);
+            mostrarRespuestaCategoria(respuesta);
+        },
+        error: function (xhr, status) {
+            alert('ha sucedido un problema');
+        },
+        complete: function (xhr, status) {
+            //console.log(status);
+        }
+
+    });
+
+}
+
+function mostrarRespuestaCategoria(items) {
+    var tabla = `<table border="1">
+                  <tr>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                    <th>ACTIONS</th>
+                  </tr>`;
+
+
+    for (var i = 0; i < items.length; i++) {
+        tabla += `<tr>
+                   <td>${items[i].name}</td>
+                   <td>${items[i].description}</td>
+                   <td>
+                   <button class="btn-eliminar" onclick="eliminarComputer(${items[i].id})">Eliminar</button>
+                   <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>
+                   </td> 
+                   </tr>`;
+    }
+    tabla += `</table>`;
+
+    $("#tablaCat").html(tabla);
+}
+
+
+//===============================================
 // COMPUTER
 //===============================================
 
@@ -9,8 +59,8 @@ function consultarComputer() {
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
-            console.log(respuesta.items);
-            mostrarRespuestaComputer(respuesta.items);
+            console.log(respuesta);
+            mostrarRespuestaComputer(respuesta);
         },
         error: function (xhr, status) {
             alert('ha sucedido un problema');
@@ -26,22 +76,20 @@ function consultarComputer() {
 function mostrarRespuestaComputer(items) {
     var tabla = `<table border="1">
                   <tr>
-                    <th>ID</th>
-                    <th>BRAND</th>
-                    <th>MODEL</th>
-                    <th>CATEGORY_ID</th>
                     <th>NAME</th>
+                    <th>BRAND</th>
+                    <th>YEAR</th>
+                    <th>DESCRIPTION</th>
                     <th>ACTIONS</th>
                   </tr>`;
 
 
     for (var i = 0; i < items.length; i++) {
         tabla += `<tr>
-                   <td>${items[i].id}</td>
-                   <td>${items[i].brand}</td>
-                   <td>${items[i].model}</td>
-                   <td>${items[i].category_id}</td>
                    <td>${items[i].name}</td>
+                   <td>${items[i].brand}</td>
+                   <td>${items[i].year}</td>
+                   <td>${items[i].description}</td>
                    <td>
                    <button class="btn-eliminar" onclick="eliminarComputer(${items[i].id})">Eliminar</button>
                    <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>
@@ -66,8 +114,8 @@ function consultarClient() {
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
-            console.log(respuesta.items);
-            mostrarRespuestaClient(respuesta.items);
+            console.log(respuesta);
+            mostrarRespuestaClient(respuesta);
         },
         error: function (xhr, status) {
             alert('ha sucedido un problema');
@@ -82,8 +130,9 @@ function mostrarRespuestaClient(items) {
     var tabla = `<table border="1">
                   <tr>
                     <th>ID</th>
-                    <th>NAME</th>
                     <th>EMAIL</th>
+                    <th>PASSWORD</th>
+                    <th>NAME</th>                    
                     <th>AGE</th>                    
                     <th>ACTIONS</th>
                   </tr>`;
@@ -91,9 +140,10 @@ function mostrarRespuestaClient(items) {
 
     for (var i = 0; i < items.length; i++) {
         tabla += `<tr>
-                   <td>${items[i].id}</td>
-                   <td>${items[i].name}</td>
+                   <td>${items[i].idClient}</td>
                    <td>${items[i].email}</td>
+                   <td>${items[i].password}</td>
+                   <td>${items[i].name}</td>
                    <td>${items[i].age}</td>
                    <td>
                    <button class="btn-eliminar" onclick="eliminarClient(${items[i].id})">Eliminar</button>
@@ -120,8 +170,8 @@ function consultarMessage() {
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
-            console.log(respuesta.items);
-            mostrarRespuestaMessage(respuesta.items);
+            console.log(respuesta);
+            mostrarRespuestaMessage(respuesta);
         },
         error: function (xhr, status) {
             alert('ha sucedido un problema');
@@ -137,7 +187,6 @@ function consultarMessage() {
 function mostrarRespuestaMessage(items) {
     var tabla = `<table border="1">
                   <tr>
-                    <th>ID</th>
                     <th>MESSAGE</th>                   
                     <th>ACTIONS</th>
                   </tr>`;
@@ -145,8 +194,7 @@ function mostrarRespuestaMessage(items) {
 
     for (var i = 0; i < items.length; i++) {
         tabla += `<tr>
-                   <td>${items[i].id}</td>
-                   <td>${items[i].messagetext}</td>
+                   <td>${items[i].messageText}</td>
                    <td>
                    <button class="btn-eliminar" onclick="eliminarMessage(${items[i].id})">Eliminar</button>
                    <a class="edicion" href="detalleMessage.html?id=${items[i].id}">Editar</a>                   
@@ -156,4 +204,53 @@ function mostrarRespuestaMessage(items) {
     tabla += `</table>`;
 
     $("#tablaMessage").html(tabla);
+}
+
+//===============================================
+// RESERVAS
+//===============================================
+
+
+function consultarReserva() {
+
+    $.ajax({
+        url: "http://localhost:8080/api/Reservation/all",
+        type: 'GET',
+        dataType: 'json',
+        success: function (respuesta) {
+            console.log(respuesta);
+            mostrarRespuestaReservas(respuesta);
+        },
+        error: function (xhr, status) {
+            alert('ha sucedido un problema');
+        },
+        complete: function (xhr, status) {
+            //console.log(status);
+        }
+
+    });
+
+}
+
+function mostrarRespuestaReservas(items) {
+    var tabla = `<table border="1">
+                  <tr>
+                    <th>FECHA INICIO</th>                   
+                    <th>FECHA DEVOLUCION</th>
+                  </tr>`;
+
+
+    for (var i = 0; i < items.length; i++) {
+        tabla += `<tr>
+                   <td>${items[i].startDate}</td>
+                   <td>${items[i].devolutionDate}</td>
+                   <td>
+                   <button class="btn-eliminar" onclick="eliminarMessage(${items[i].id})">Eliminar</button>
+                   <a class="edicion" href="detalleMessage.html?id=${items[i].id}">Editar</a>                   
+                   </td> 
+                   </tr>`;
+    }
+    tabla += `</table>`;
+
+    $("#tablaReservas").html(tabla);
 }

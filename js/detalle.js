@@ -9,13 +9,13 @@ $(document).ready(function () {
 
 function consultarById(id){
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/computer/computer/"+id,
+        url: "http://localhost:8080/api/Computer/all"+id,
         type: 'GET',
         dataType: 'json',
         success: function(respuesta){
-            console.log(respuesta.items);
+            console.log(respuesta);
             if (respuesta.items.length==1){
-                llenarDatos(respuesta.items[0]);
+                llenarDatos(respuesta[0]);
             }else{
                 $("#boton").hide();
                 alert('No se encuentra el computador con el id '+id);
@@ -28,9 +28,9 @@ function consultarById(id){
 }
 
 function llenarDatos(item){
-    $("#id").val(item.id);
+    +$("#id").val(item.id);
+    $("#Cname").val(item.name);
     $("#brand").val(item.brand);
-    $("#model").val(item.model);
-    $("#category_id").val(item.category_id);
-    $("#name").val(item.name);
+    +$("#year").val(item.year);
+    $("#description").val(item.description);
 }

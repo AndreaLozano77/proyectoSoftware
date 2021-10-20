@@ -12,7 +12,7 @@ function eliminarComputer(identificador){
     console.log(computer);
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/computer/computer",
+        url: "http://localhost:8080/api/Computer/delete",
         type: 'DELETE',
         dataType: 'json',
         headers: {
