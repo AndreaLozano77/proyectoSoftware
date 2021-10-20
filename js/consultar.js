@@ -5,7 +5,7 @@
 function consultarComputer() {
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/computer/computer",
+        url: "http://localhost:8080/api/Computer/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -62,7 +62,7 @@ function mostrarRespuestaComputer(items) {
 function consultarClient() {
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client",
+        url: "http://localhost:8080/api/Client/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -116,7 +116,7 @@ function mostrarRespuestaClient(items) {
 function consultarMessage() {
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message",
+        url: "http://localhost:8080/api/Message/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {

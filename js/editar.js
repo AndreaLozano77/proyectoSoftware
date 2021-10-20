@@ -19,7 +19,7 @@ function editarComputer(){
     console.log(computer);
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/computer/computer",
+        url: "http://localhost:8080/api/Computer/put",
         type: 'PUT',
         dataType: 'json',
         headers: {
@@ -52,7 +52,7 @@ function editarClient(){
     console.log(client);
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client",
+        url: "http://localhost:8080/api/Client/put",
         type: 'PUT',
         dataType: 'json',
         headers: {
@@ -85,7 +85,7 @@ function editarMessage(){
     console.log(message);
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message",
+        url: "http://localhost:8080/api/Message/put",
         type: 'PUT',
         dataType: 'json',
         headers: {
