@@ -1,4 +1,4 @@
-//Este archivo es en donde haremos PUT
+/* //Este archivo es en donde haremos PUT
 console.log("editar: ¡funciona!");
 //=======================================
 // EDITAR COMPUTER
@@ -19,7 +19,7 @@ function editarComputer(){
     console.log(computer);
 
     $.ajax({
-        url: "http://localhost:8080/api/Computer/put",
+        url: "http://localhost:8080/api/Computer/update",
         type: 'PUT',
         dataType: 'json',
         headers: {
@@ -52,7 +52,7 @@ function editarClient(){
     console.log(client);
 
     $.ajax({
-        url: "http://localhost:8080/api/Client/put",
+        url: "http://",
         type: 'PUT',
         dataType: 'json',
         headers: {
@@ -85,7 +85,7 @@ function editarMessage(){
     console.log(message);
 
     $.ajax({
-        url: "http://localhost:8080/api/Message/put",
+        url: "http://",
         type: 'PUT',
         dataType: 'json',
         headers: {
@@ -99,3 +99,4 @@ function editarMessage(){
         },
     });
 }
+ */

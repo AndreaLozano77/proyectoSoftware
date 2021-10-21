@@ -1,4 +1,4 @@
-//Este archivo es donde haremos DELETE
+/* 
 
 // ELIMINAR COMPUTADORES
 
@@ -12,7 +12,7 @@ function eliminarComputer(identificador){
     console.log(computer);
 
     $.ajax({
-        url: "http://localhost:8080/api/Computer/delete",
+        url: "http://",
         type: 'DELETE',
         dataType: 'json',
         headers: {
@@ -42,7 +42,7 @@ function eliminarClient(identificador){
     console.log(client);
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client",
+        url: "https://",
         type: 'DELETE',
         dataType: 'json',
         headers: {
@@ -71,7 +71,7 @@ function eliminarMessage(identificador){
     console.log(message);
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message",
+        url: "https://",
         type: 'DELETE',
         dataType: 'json',
         headers: {
@@ -84,4 +84,4 @@ function eliminarMessage(identificador){
             }
         },
     });
-}
+} */

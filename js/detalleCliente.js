@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/* $(document).ready(function () {
     console.log("document ready!");
     let searchParams = new URLSearchParams(window.location.search)
     if (searchParams.has('id')){
@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 function consultarById(id){
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client/"+id,
+        url: "https://"+id,
         type: 'GET',
         dataType: 'json',
         success: function(respuesta){
@@ -28,8 +28,8 @@ function consultarById(id){
 }
 
 function llenarDatos(item){
-    $("#id").val(item.id);
+    +$("#id").val(item.id);
     $("#name").val(item.name);
     $("#email").val(item.email);
-    $("#age").val(item.age);
-}
+    +$("#age").val(item.age);
+} */
