@@ -37,8 +37,8 @@ function mostrarRespuestaCategoria(items) {
                    <td>${items[i].name}</td>
                    <td>${items[i].description}</td>
                    <td>
-                   <button class="btn-eliminar" onclick="eliminarComputer(${items[i].id})">Eliminar</button>
-                   <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>
+                   <button class="btn-eliminar" onclick="eliminarCategoria(${items[i].id})">Eliminar</button>
+                   <a class="edicion" href="detalleCat.html?id=${items[i].id}">Editar</a>
                    </td> 
                    </tr>`;
     }
@@ -246,7 +246,7 @@ function mostrarRespuestaReservas(items) {
                    <td>${items[i].devolutionDate}</td>
                    <td>
                    <button class="btn-eliminar" onclick="eliminarMessage(${items[i].id})">Eliminar</button>
-                   <a class="edicion" href="detalleMessage.html?id=${items[i].id}">Editar</a>                   
+                   <a class="edicion" href="detalleReserva.html?id=${items[i].id}">Editar</a>                   
                    </td> 
                    </tr>`;
     }

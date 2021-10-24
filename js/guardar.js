@@ -3,12 +3,12 @@
 //===============================================
 
 function guardarCategoria(){
-    let computador = {
+    let categoria = {
         name:  $("#Catname").val(),
         description: $("#Catdescription").val()
     };
 
-    console.log("voy a guardar", computador);
+    console.log("voy a guardar", categoria);
 
     $.ajax({
         url: "http://localhost:8080/api/Category/save",
@@ -17,7 +17,7 @@ function guardarCategoria(){
         headers: {
             "Content-Type": "application/json"
         },
-        data: JSON.stringify(computador),
+        data: JSON.stringify(categoria),
         statusCode:{
             201:function(){
                 alert('Se ha registrado la categoria');

@@ -1,5 +1,33 @@
 //Este archivo es donde haremos DELETE
 
+// ELIMINAR CATEGORIA
+
+function eliminarCategoria(identificador){
+    console.log("ejecutando funcion para eliminar");
+
+    let categoria = {
+        id: +identificador
+    };
+
+    console.log(categoria);
+
+    $.ajax({
+        url: "http://localhost:8080/api/Category/deletecategoria",
+        type: 'DELETE',
+        dataType: 'json',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        data: JSON.stringify(categoria),
+        statusCode:{
+            204:function(){
+                alert('Se ha eliminado el computador');
+            }
+        },
+    });
+} 
+
+
 // ELIMINAR COMPUTADORES
 
 function eliminarComputer(identificador){
@@ -12,7 +40,7 @@ function eliminarComputer(identificador){
     console.log(computer);
 
     $.ajax({
-        url: "http://localhost:8080/api/Computer/delete",
+        url: "http://",
         type: 'DELETE',
         dataType: 'json',
         headers: {
@@ -42,7 +70,7 @@ function eliminarClient(identificador){
     console.log(client);
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client",
+        url: "https://",
         type: 'DELETE',
         dataType: 'json',
         headers: {
@@ -71,7 +99,7 @@ function eliminarMessage(identificador){
     console.log(message);
 
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message",
+        url: "https://",
         type: 'DELETE',
         dataType: 'json',
         headers: {

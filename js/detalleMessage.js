@@ -9,18 +9,27 @@ $(document).ready(function () {
 
 function consultarById(id){
     $.ajax({
-        url: "https://g8ed37e9b235013-computer.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message/"+id,
+        url: "http://localhost:8080/api/Message/"+id,
         type: 'GET',
         dataType: 'json',
         success: function(respuesta){
-            console.log(respuesta.items);
-            if (respuesta.items.length==1){
-                llenarDatos(respuesta.items[0]);
+
+            var length= 0;
+            for(var key in respuesta) {
+                if(respuesta.hasOwnProperty(key)){
+                    length++;
+                }
+            }
+
+            if (length>0){
+                console.log(respuesta)
+                llenarDatos(respuesta);
             }else{
                 $("#boton").hide();
-                alert('No se encuentra el message con el id '+id);
+                alert('No se encuentra el mensaje con el id '+id);
             }
         },
+
         error: function (xhr, status) {
             alert('ha sucedido un problema');
         }
