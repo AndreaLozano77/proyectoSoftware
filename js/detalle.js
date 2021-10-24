@@ -9,7 +9,11 @@ $(document).ready(function () {
 
 function consultarById(id){
     $.ajax({
+<<<<<<< HEAD
         url: "http://localhost:8080/api/Computer/"+id,
+=======
+        url: "http://"+id,
+>>>>>>> d692407910e560de06ea6c36d1ec10e846fc5fc2
         type: 'GET',
         dataType: 'json',
         success: function(respuesta){

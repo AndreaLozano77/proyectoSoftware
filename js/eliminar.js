@@ -1,4 +1,4 @@
-//Este archivo es donde haremos DELETE
+/* 
 
 // ELIMINAR CATEGORIA
 
@@ -112,4 +112,4 @@ function eliminarMessage(identificador){
             }
         },
     });
-}
+} */

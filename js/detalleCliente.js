@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/* $(document).ready(function () {
     console.log("document ready!");
     let searchParams = new URLSearchParams(window.location.search)
     if (searchParams.has('id')){
@@ -9,7 +9,11 @@ $(document).ready(function () {
 
 function consultarById(id){
     $.ajax({
+<<<<<<< HEAD
         url: "http://localhost:8080/api/Client/"+id,
+=======
+        url: "https://"+id,
+>>>>>>> d692407910e560de06ea6c36d1ec10e846fc5fc2
         type: 'GET',
         dataType: 'json',
         success: function(respuesta){
@@ -36,8 +40,16 @@ function consultarById(id){
 }
 
 function llenarDatos(item){
+<<<<<<< HEAD
     +$("#id").val(item.idClient);
     $("#name").val(item.name);
     $("#email").val(item.email);
     +$("#age").val(item.age);
 }
+=======
+    +$("#id").val(item.id);
+    $("#name").val(item.name);
+    $("#email").val(item.email);
+    +$("#age").val(item.age);
+} */
+>>>>>>> d692407910e560de06ea6c36d1ec10e846fc5fc2
