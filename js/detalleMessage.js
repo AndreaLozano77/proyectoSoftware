@@ -1,4 +1,4 @@
-/* $(document).ready(function () {
+ $(document).ready(function () {
     console.log("document ready!");
     let searchParams = new URLSearchParams(window.location.search)
     if (searchParams.has('id')){
@@ -9,7 +9,7 @@
 
 function consultarById(id){
     $.ajax({
-        url: "https://"+id,
+        url: "http://localhost:8080/api/Message/"+id,
         type: 'GET',
         dataType: 'json',
         success: function(respuesta){
@@ -39,4 +39,4 @@ function consultarById(id){
 function llenarDatos(item){
     $("#id").val(item.id);
     $("#messagetext").val(item.messagetext);
-} */
+} 
