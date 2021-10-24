@@ -5,7 +5,7 @@
 function consultarCategoria() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Category/all",
+        url: "http://localhost:8080/api/Category/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -55,7 +55,7 @@ function mostrarRespuestaCategoria(items) {
 function consultarComputer() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Computer/all",
+        url: "http://localhost:8080/api/Computer/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -110,7 +110,7 @@ function mostrarRespuestaComputer(items) {
 function consultarClient() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Client/all",
+        url: "http://localhost:8080/api/Client/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -166,7 +166,7 @@ function mostrarRespuestaClient(items) {
 function consultarMessage() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Message/all",
+        url: "http://localhost:8080/api/Message/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -214,7 +214,7 @@ function mostrarRespuestaMessage(items) {
 function consultarReserva() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Reservation/all",
+        url: "http://localhost:8080/api/Reservation/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
