@@ -28,6 +28,34 @@ function eliminarComputer(identificador){
 } 
 
 
+// ELIMINAR CATEGORIA
+
+function eliminarCategoria(identificador){
+    console.log("ejecutando funcion para eliminar");
+
+    let categoria = {
+        id: +identificador
+    };
+
+    console.log(categoria);
+
+    $.ajax({
+        url: "http://localhost:8080/api/Category/deletecategoria",
+        type: 'DELETE',
+        dataType: 'json',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        data: JSON.stringify(categoria),
+        statusCode:{
+            204:function(){
+                alert('Se ha eliminado el computador');
+            }
+        },
+    });
+} 
+
+
 // ELIMINAR COMPUTADORES
 
 function eliminarComputer(identificador){

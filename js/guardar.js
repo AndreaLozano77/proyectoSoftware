@@ -3,22 +3,25 @@
 //===============================================
 
 function guardarCategoria(){
-    let computador = {
+    let categoria = {
         name:  $("#Catname").val(),
         description: $("#Catdescription").val()
     };
 
-    console.log("voy a guardar", computador);
+    console.log("voy a guardar", categoria);
 
     $.ajax({
+<<<<<<< HEAD
         // url: "http://129.151.119.152:8080/api/Category/save",
+=======
+>>>>>>> 005e556df3923f4d7a1e51ca2ef5ea52eb52ec90
         url: "http://localhost:8080/api/Category/save",
         type: 'POST',
         dataType: 'json',
         headers: {
             "Content-Type": "application/json"
         },
-        data: JSON.stringify(computador),
+        data: JSON.stringify(categoria),
         statusCode:{
             201:function(){
                 alert('Se ha registrado la categoria');
@@ -44,7 +47,10 @@ function guardarComputer(){
     console.log("voy a guardar", computador);
 
     $.ajax({
+<<<<<<< HEAD
         // url: "http://129.151.119.152:8080/api/Category/save",
+=======
+>>>>>>> 005e556df3923f4d7a1e51ca2ef5ea52eb52ec90
         url: "http://localhost:8080/api/Computer/save",
         type: 'POST',
         dataType: 'json',
@@ -78,7 +84,10 @@ function guardarClient(){
     console.log("voy a guardar", client);
 
     $.ajax({
+<<<<<<< HEAD
         // url: "http://129.151.119.152:8080/api/Category/save",
+=======
+>>>>>>> 005e556df3923f4d7a1e51ca2ef5ea52eb52ec90
         url: "http://localhost:8080/api/Client/save",
         type: 'POST',
         dataType: 'json',
@@ -109,7 +118,10 @@ function guardarMessage(){
     console.log("voy a guardar", messages);
 
     $.ajax({
+<<<<<<< HEAD
         // url: "http://129.151.119.152:8080/api/Category/save",
+=======
+>>>>>>> 005e556df3923f4d7a1e51ca2ef5ea52eb52ec90
         url: "http://localhost:8080/api/Message/save",
         type: 'POST',
         dataType: 'json',
@@ -139,7 +151,10 @@ function guardarReserva(){
     console.log("voy a guardar", reservas);
 
     $.ajax({
+<<<<<<< HEAD
         // url: "http://129.151.119.152:8080/api/Category/save",
+=======
+>>>>>>> 005e556df3923f4d7a1e51ca2ef5ea52eb52ec90
         url: "http://localhost:8080/api/Reservation/save",
         type: 'POST',
         dataType: 'json',

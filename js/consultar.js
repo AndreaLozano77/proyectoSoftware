@@ -253,7 +253,7 @@ function mostrarRespuestaReservas(items) {
                    <td>${items[i].devolutionDate}</td>
                    <td>
                    <button class="btn-eliminar" onclick="eliminarMessage(${items[i].id})">Eliminar</button>
-                   <a class="edicion" href="detalleMessage.html?id=${items[i].id}">Editar</a>                   
+                   <a class="edicion" href="detalleReserva.html?id=${items[i].id}">Editar</a>                   
                    </td> 
                    </tr>`;
     }
