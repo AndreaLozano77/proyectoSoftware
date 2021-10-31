@@ -5,7 +5,8 @@
 function consultarCategoria() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Category/all",
+        // url: "http://129.151.119.152:8080/api/Category/all",
+        url: "http://localhost:8080/api/Category/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -37,8 +38,8 @@ function mostrarRespuestaCategoria(items) {
                    <td>${items[i].name}</td>
                    <td>${items[i].description}</td>
                    <td>
-                   <button class="btn-eliminar" onclick="eliminarComputer(${items[i].id})">Eliminar</button>
-                   <a class="edicion" href="detalle.html?id=${items[i].id}">Editar</a>
+                   <button class="btn-eliminar" onclick="eliminarCategoria(${items[i].id})">Eliminar</button>
+                   <a class="edicion" href="detalleCat.html?id=${items[i].id}">Editar</a>
                    </td> 
                    </tr>`;
     }
@@ -55,7 +56,8 @@ function mostrarRespuestaCategoria(items) {
 function consultarComputer() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Computer/all",
+        // url: "http://129.151.119.152:8080/api/Computer/all",
+        url: "http://localhost:8080/api/Computer/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -110,7 +112,8 @@ function mostrarRespuestaComputer(items) {
 function consultarClient() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Client/all",
+        // url: "http://129.151.119.152:8080/api/Client/all",
+        url: "http://localhost:8080/api/Client/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -166,7 +169,8 @@ function mostrarRespuestaClient(items) {
 function consultarMessage() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Message/all",
+        // url: "http://129.151.119.152:8080/api/Message/all",
+        url: "http://localhost:8080/api/Message/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {
@@ -187,6 +191,7 @@ function consultarMessage() {
 function mostrarRespuestaMessage(items) {
     var tabla = `<table border="1">
                   <tr>
+                    <th>ID</th>                   
                     <th>MESSAGE</th>                   
                     <th>ACTIONS</th>
                   </tr>`;
@@ -194,6 +199,7 @@ function mostrarRespuestaMessage(items) {
 
     for (var i = 0; i < items.length; i++) {
         tabla += `<tr>
+                   <td>${items[i].idMessage}</td>
                    <td>${items[i].messageText}</td>
                    <td>
                    <button class="btn-eliminar" onclick="eliminarMessage(${items[i].id})">Eliminar</button>
@@ -214,7 +220,8 @@ function mostrarRespuestaMessage(items) {
 function consultarReserva() {
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Reservation/all",
+        // url: "http://129.151.119.152:8080/api/Reservation/all",
+        url: "http://localhost:8080/api/Reservation/all",
         type: 'GET',
         dataType: 'json',
         success: function (respuesta) {

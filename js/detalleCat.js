@@ -9,16 +9,16 @@ $(document).ready(function () {
 
 function consultarById(id){
     $.ajax({
-        url: "https://localhost:8080/api/Message"+id,
+        url: "http:localhost:8080/api/Category"+id,
         type: 'GET',
         dataType: 'json',
         success: function(respuesta){
-            console.log(respuesta.items);
+            console.log(respuesta);
             if (respuesta.items.length==1){
-                llenarDatos(respuesta.items[0]);
+                llenarDatos(respuesta[0]);
             }else{
                 $("#boton").hide();
-                alert('No se encuentra el message con el id '+id);
+                alert('No se encuentra la categoria con el id '+id);
             }
         },
         error: function (xhr, status) {
@@ -28,6 +28,7 @@ function consultarById(id){
 }
 
 function llenarDatos(item){
-    $("#idMessage").val(item.idMessage);
-    $("#messageText").val(item.messageText);
-} 
+    +$("#id").val(item.id);
+    $("#Catname").val(item.name);
+    $("#Catdescription").val(item.description);
+}

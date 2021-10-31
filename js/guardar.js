@@ -11,7 +11,8 @@ function guardarCategoria(){
     console.log("voy a guardar", computador);
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Category/save",
+        // url: "http://129.151.119.152:8080/api/Category/save",
+        url: "http://localhost:8080/api/Category/save",
         type: 'POST',
         dataType: 'json',
         headers: {
@@ -43,7 +44,8 @@ function guardarComputer(){
     console.log("voy a guardar", computador);
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Computer/save",
+        // url: "http://129.151.119.152:8080/api/Category/save",
+        url: "http://localhost:8080/api/Computer/save",
         type: 'POST',
         dataType: 'json',
         headers: {
@@ -76,7 +78,8 @@ function guardarClient(){
     console.log("voy a guardar", client);
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Client/save",
+        // url: "http://129.151.119.152:8080/api/Category/save",
+        url: "http://localhost:8080/api/Client/save",
         type: 'POST',
         dataType: 'json',
         headers: {
@@ -99,13 +102,15 @@ function guardarClient(){
 
 function guardarMessage(){
     let messages = {
-        messageText: $("#message").val()
+        idMessage: $("#idMessage").val(),
+        messageText: $("#messageText").val()
     };
 
     console.log("voy a guardar", messages);
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Message/save",
+        // url: "http://129.151.119.152:8080/api/Category/save",
+        url: "http://localhost:8080/api/Message/save",
         type: 'POST',
         dataType: 'json',
         headers: {
@@ -134,7 +139,8 @@ function guardarReserva(){
     console.log("voy a guardar", reservas);
 
     $.ajax({
-        url: "http://129.151.119.152:8080/api/Reservation/save",
+        // url: "http://129.151.119.152:8080/api/Category/save",
+        url: "http://localhost:8080/api/Reservation/save",
         type: 'POST',
         dataType: 'json',
         headers: {
